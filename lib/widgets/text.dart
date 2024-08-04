@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialWidget extends StatelessWidget {
-  SocialWidget({
+  const SocialWidget({
     required this.iconData,
     required this.placeholderText,
     required this.link,
@@ -20,15 +20,15 @@ class SocialWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: Row(
         children: [
           Container(
-            margin: EdgeInsets.all(4),
+            margin: const EdgeInsets.all(4),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   height: iconSize ?? 30,
                   width: iconSize ?? 30,
                   child: Icon(
@@ -37,7 +37,7 @@ class SocialWidget extends StatelessWidget {
                     color: iconColor ?? Colors.grey,
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 InkWell(
                   onTap: () async {
                     await launchUrl(Uri.parse(link));

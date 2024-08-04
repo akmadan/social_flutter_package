@@ -26,7 +26,7 @@ class App extends StatelessWidget {
         title: const Text('Social Handles'),
         backgroundColor: Colors.black,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -44,7 +44,7 @@ class App extends StatelessWidget {
                       iconColor: Colors.pink,
                       link: 'https://www.instagram.com/akshitmadan_/',
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'akmadan',
@@ -52,7 +52,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.black,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'AkshitMadan6',
@@ -60,7 +60,7 @@ class App extends StatelessWidget {
                       iconColor: Colors.lightBlue,
                       link: '',
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'AkshitMadan',
@@ -68,7 +68,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.red,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -76,7 +76,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.blueGrey,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'akmadan1717',
@@ -84,7 +84,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.black,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -92,7 +92,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.deepPurple,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -100,7 +100,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.blueAccent,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -108,7 +108,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.blueGrey,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -116,7 +116,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.deepPurpleAccent,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -124,7 +124,7 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.blueGrey,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     SocialWidget(
                       placeholderText: 'Akshit Madan',
@@ -132,13 +132,13 @@ class App extends StatelessWidget {
                       link: '',
                       iconColor: Colors.green,
                       placeholderStyle:
-                          const TextStyle(color: Colors.black, fontSize: 20),
+                          TextStyle(color: Colors.black, fontSize: 20),
                     ),
                   ],
                 )),
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             Row(
@@ -150,7 +150,7 @@ class App extends StatelessWidget {
                   link: '',
                   iconSize: 20,
                   placeholderStyle:
-                      const TextStyle(fontSize: 14, color: Colors.grey),
+                      TextStyle(fontSize: 14, color: Colors.grey),
                 ),
                 SocialWidget(
                   placeholderText: '/Akshit Madan',
@@ -158,7 +158,7 @@ class App extends StatelessWidget {
                   link: '',
                   iconSize: 20,
                   placeholderStyle:
-                      const TextStyle(fontSize: 14, color: Colors.grey),
+                      TextStyle(fontSize: 14, color: Colors.grey),
                 ),
               ],
             )
