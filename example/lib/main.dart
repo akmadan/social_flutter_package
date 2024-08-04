@@ -33,7 +33,7 @@ class App extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -149,14 +149,16 @@ class App extends StatelessWidget {
                   iconData: SocialIconsFlutter.youtube,
                   link: '',
                   iconSize: 20,
-                  placeholderStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+                  placeholderStyle:
+                      const TextStyle(fontSize: 14, color: Colors.grey),
                 ),
                 SocialWidget(
                   placeholderText: '/Akshit Madan',
                   iconData: SocialIconsFlutter.linkedin_box,
                   link: '',
                   iconSize: 20,
-                  placeholderStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+                  placeholderStyle:
+                      const TextStyle(fontSize: 14, color: Colors.grey),
                 ),
               ],
             )
