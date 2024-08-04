@@ -12,7 +12,9 @@ class SocialWidget extends StatelessWidget {
     super.key,
   });
 
-  final String placeholderText, link;
+  final String placeholderText;
+  /// Begin with `https://...`
+  final String link;
   final IconData iconData;
   final TextStyle? placeholderStyle;
   final Color? iconColor;
@@ -40,7 +42,20 @@ class SocialWidget extends StatelessWidget {
                 const SizedBox(width: 10),
                 InkWell(
                   onTap: () async {
-                    await launchUrl(Uri.parse(link));
+                    final newUrl = link.split('https://').last;
+                    final host = newUrl.split('/').first;
+                    final path = newUrl.split('/').last == host
+                        ? ''
+                        : newUrl.split('/').last;
+                    final uri = Uri(
+                      host: host,
+                      path: path,
+                      scheme: 'https',
+                    );
+                    if (await canLaunchUrl(uri)) {
+                      await launchUrl(uri,
+                          mode: LaunchMode.externalApplication);
+                    }
                   },
                   child: Text(
                     placeholderText,
