@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_flutter/social_media_flutter.dart';
-import 'package:social_media_flutter/utils/icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialWidget extends StatelessWidget {
+  SocialWidget({
+    required this.iconData,
+    required this.placeholderText,
+    required this.link,
+    this.placeholderStyle,
+    this.iconSize,
+    this.iconColor,
+    super.key,
+  });
+
   final String placeholderText, link;
   final IconData iconData;
-  TextStyle placeholderStyle;
-  Color iconColor;
-  double iconSize;
-  SocialWidget(
-      {Key? key,
-      required this.iconData,
-      required this.placeholderText,
-      required this.link,
-      this.placeholderStyle = const TextStyle(
-        fontSize: 20,
-        color: Colors.grey,
-      ),
-      this.iconSize = 30,
-      this.iconColor = Colors.grey})
-      : super(key: key);
+  final TextStyle? placeholderStyle;
+  final Color? iconColor;
+  final double? iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -33,24 +29,26 @@ class SocialWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: iconSize,
-                  width: iconSize,
+                  height: iconSize ?? 30,
+                  width: iconSize ?? 30,
                   child: Icon(
                     iconData,
-                    size: iconSize,
-                    color: iconColor,
+                    size: iconSize ?? 30,
+                    color: iconColor ?? Colors.grey,
                   ),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+                SizedBox(width: 10),
                 InkWell(
                   onTap: () async {
-                    await launch(link);
+                    await launchUrl(Uri.parse(link));
                   },
                   child: Text(
                     placeholderText,
-                    style: placeholderStyle,
+                    style: placeholderStyle ??
+                        const TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey,
+                        ),
                   ),
                 )
               ],
